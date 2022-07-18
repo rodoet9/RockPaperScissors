@@ -20,6 +20,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
     generateComputerChoice();
     getResult();
     numberOfGames();
+    resetGame();
 }))
 
 function generateComputerChoice() {
@@ -81,3 +82,11 @@ function numberOfGames() {
         result = 'Congrats! You are the winner of this round.';
     } resultDisplay.innerHTML = result;
 }
+function resetGame() {
+    if ( userScore == 5 || computerScore == 5) {
+        userScore = 0;
+        computerScore = 0;
+    }
+    computerScoreDisplay.innerHTML = computerScore;
+    userScoreDisplay.innerHTML = userScore;
+ }
